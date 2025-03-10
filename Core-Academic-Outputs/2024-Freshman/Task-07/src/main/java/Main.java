@@ -1,3 +1,10 @@
+/**
+ * This code is made by Ransel Sumatra.
+ * GitHub: https://github.com/ranselcrackers/
+ * GitHub Username: ranselcrackers
+ * Specialization: BSIT Major in Marketing Technologies at Mapúa Malayan Colleges Laguna
+ */
+
 import java.util.ArrayList;
 
 public class Main {
