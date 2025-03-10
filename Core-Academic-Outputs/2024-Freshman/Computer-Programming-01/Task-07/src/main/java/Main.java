@@ -18,4 +18,4 @@ public class Main {
             System.out.println("\n"); // Add space between tables
         }
     }
-}
+}   
