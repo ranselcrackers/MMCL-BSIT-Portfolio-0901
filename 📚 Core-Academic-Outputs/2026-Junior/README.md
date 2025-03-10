@@ -1,10 +1,10 @@
-# Freshman 2024-2025
+# Junior 2026-2027
 
         🕯️  🕯️
      🕯️         🕯️
    🕯️  uno grade  🕯️
-  🕯️    ngayong    🕯️
-   🕯️    2025     🕯️
+  🕯️   pa rin sa   🕯️
+   🕯️    2027     🕯️
      🕯️         🕯️
         🕯️  🕯️
         
@@ -13,4 +13,5 @@
 Thank You in advance, Lord! 🙏
 This is all for You!
 
-First year na inspired ni Mako <3
+Uyy! Konting push na lang XD
+I'll do my best for my Mako <3
