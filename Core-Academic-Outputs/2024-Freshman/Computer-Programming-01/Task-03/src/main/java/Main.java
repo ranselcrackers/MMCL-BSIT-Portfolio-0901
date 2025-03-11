@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        WelcomeScreen.displayWelcomeScreen();
         // Create a list to store employees
         ArrayList<Employee> employees = EmployeeDataInitializer.initializeEmployees();
 
