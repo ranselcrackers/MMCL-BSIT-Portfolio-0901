@@ -84,4 +84,4 @@ public class HoursData {
     public int getAssumedRegularHours() {
         return assumedRegularHours;
     }
-}
+}   
