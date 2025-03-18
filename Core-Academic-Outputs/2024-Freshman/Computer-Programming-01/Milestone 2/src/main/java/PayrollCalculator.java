@@ -47,7 +47,7 @@ public class PayrollCalculator {
         System.out.println("Employee: " + employee.getFullName());
         System.out.println("Employee #: " + employee.getEmployeeNumber());
         System.out.println("Position: " + employee.getPosition());
-        System.out.println("Hourly Rate: $" + employee.getHourlyRate());
+        System.out.println("Hourly Rate: PHP " + employee.getHourlyRate());
         System.out.println("----------------------------------------");
         System.out.println("Government Agency Details:");
         System.out.println("SSS #: " + employee.getSssNumber());
@@ -56,14 +56,14 @@ public class PayrollCalculator {
         System.out.println("Pag-IBIG #: " + employee.getPagibigNumber());
         System.out.println("----------------------------------------");
         System.out.println("Period: " + month + " Week " + week);
-        System.out.printf("Basic Pay: $%.2f\n", basicPay);
-        System.out.printf("Overtime Pay: $%.2f\n", overtimePay);
+        System.out.printf("Basic Pay: PHP %.2f\n", basicPay);
+        System.out.printf("Overtime Pay: PHP %.2f\n", overtimePay);
         System.out.println("----------------------------------------");
-        System.out.printf("SSS Deduction: $%.2f\n", sss);
-        System.out.printf("PhilHealth Deduction: $%.2f\n", philhealth);
-        System.out.printf("Pag-IBIG Deduction: $%.2f\n", pagibig);
-        System.out.printf("Withholding Tax: $%.2f\n", withholdingTax);
+        System.out.printf("SSS Deduction: PHP %.2f\n", sss);
+        System.out.printf("PhilHealth Deduction: PHP %.2f\n", philhealth);
+        System.out.printf("Pag-IBIG Deduction: PHP %.2f\n", pagibig);
+        System.out.printf("Withholding Tax: PHP %.2f\n", withholdingTax);
         System.out.println("----------------------------------------");
-        System.out.printf("Net Pay: $%.2f\n", netPay);
+        System.out.printf("Net Pay: PHP %.2f\n", netPay);
     }
 }
