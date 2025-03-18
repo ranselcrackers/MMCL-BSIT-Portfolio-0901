@@ -28,7 +28,7 @@ public class PayrollCalculator {
         double basicPay = regularHours * hourlyRate;
         double overtimePay = overtimeHours * hourlyRate * 1.25; // 25% overtime rate
 
-        // Calculate deductions (using GovernmentContributionsCalculator)
+        // Calculate deductions
         double monthlyBasic = employee.getHourlyRate() * hoursData.getAssumedRegularHours() * 4; // Approximate monthly salary
         double weeklyBasic = monthlyBasic / 4;
 
@@ -45,16 +45,25 @@ public class PayrollCalculator {
         // Display payroll statement
         System.out.println("\nPAYROLL STATEMENT");
         System.out.println("Employee: " + employee.getFullName());
+        System.out.println("Employee #: " + employee.getEmployeeNumber());
+        System.out.println("Position: " + employee.getPosition());
+        System.out.println("Hourly Rate: $" + employee.getHourlyRate());
+        System.out.println("----------------------------------------");
+        System.out.println("Government Agency Details:");
+        System.out.println("SSS #: " + employee.getSssNumber());
+        System.out.println("PhilHealth #: " + employee.getPhilhealthNumber());
+        System.out.println("TIN #: " + employee.getTinNumber());
+        System.out.println("Pag-IBIG #: " + employee.getPagibigNumber());
+        System.out.println("----------------------------------------");
         System.out.println("Period: " + month + " Week " + week);
+        System.out.printf("Basic Pay: $%.2f\n", basicPay);
+        System.out.printf("Overtime Pay: $%.2f\n", overtimePay);
         System.out.println("----------------------------------------");
-        System.out.printf("Basic Pay: %.2f\n", basicPay);
-        System.out.printf("Overtime Pay: %.2f\n", overtimePay);
+        System.out.printf("SSS Deduction: $%.2f\n", sss);
+        System.out.printf("PhilHealth Deduction: $%.2f\n", philhealth);
+        System.out.printf("Pag-IBIG Deduction: $%.2f\n", pagibig);
+        System.out.printf("Withholding Tax: $%.2f\n", withholdingTax);
         System.out.println("----------------------------------------");
-        System.out.printf("SSS Deduction: %.2f\n", sss);
-        System.out.printf("PhilHealth Deduction: %.2f\n", philhealth);
-        System.out.printf("Pag-IBIG Deduction: %.2f\n", pagibig);
-        System.out.printf("Withholding Tax: %.2f\n", withholdingTax);
-        System.out.println("----------------------------------------");
-        System.out.printf("Net Pay: %.2f\n", netPay);
+        System.out.printf("Net Pay: $%.2f\n", netPay);
     }
-} 
+}

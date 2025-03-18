@@ -18,20 +18,30 @@ public class EmployeeDataInitializer {
         List<Employee> employees = new ArrayList<>();
 
         // Add employee data
-        employees.add(createEmployee(10001, "Garcia", "Manuel III", "password123", 535.71, 
-            new double[][]{{42.5, 2.5}, {43.5, 3.5}, {43.5, 3.5}, {43.5, 3.5}}));
-        
-        employees.add(createEmployee(10002, "Lim", "Antonio", "password123", 500.00, 
-            new double[][]{{46.5, 6.5}, {45.5, 5.5}, {45.5, 5.5}, {45.5, 5.5}}));
+        employees.add(createEmployee(
+            10001, "Garcia", "Manuel III", "password123", 
+            "Chief Executive Officer", 535.71, 
+            new double[][]{{42.5, 2.5}, {43.5, 3.5}, {43.5, 3.5}, {43.5, 3.5}}, 
+            "44-4506057-3", "820126853951", "442-605-657-000", "691295330870"
+        ));
+
+        employees.add(createEmployee(
+            10002, "Lim", "Antonio", "password123", 
+            "Software Developer", 500.00, 
+            new double[][]{{46.5, 6.5}, {45.5, 5.5}, {45.5, 5.5}, {45.5, 5.5}}, 
+            "123456789", "123456789012", "123-456-789-000", "123456789012"
+        ));
 
         // Add the remaining 32 employees similarly...
 
         return employees;
     }
 
-    // Helper method to create an employee with hours data
     private static Employee createEmployee(int empId, String lastName, String firstName, 
-                                           String password, double hourlyRate, double[][] juneHours) {
+                                          String password, String position, double hourlyRate, 
+                                          double[][] juneHours, String sssNumber, 
+                                          String philhealthNumber, String tinNumber, 
+                                          String pagibigNumber) {
         HoursData hoursData = new HoursData(empId, 40); // Assumed regular hours: 40
 
         // Add June hours
@@ -47,10 +57,10 @@ public class EmployeeDataInitializer {
             }
         }
 
-        return new Employee(empId, lastName, firstName, password, hourlyRate, hoursData);
+        return new Employee(empId, lastName, firstName, password, position, hourlyRate, 
+                           hoursData, sssNumber, philhealthNumber, tinNumber, pagibigNumber);
     }
 
-    // Method to find an employee by ID
     public static Employee getEmployee(int empId, List<Employee> employees) {
         for (Employee emp : employees) {
             if (emp.getEmployeeNumber() == empId) {
