@@ -5,7 +5,7 @@
 - ✅ **Maximize Benefit**: Protect employee net pay by staying tax-free.  
 
 ## 2. **Monitor Tax Impact vs. Employee Net Pay**  
-- ⚠️ **Adjust Strategically**: Shift to non-taxable options (e.g., food stubs) if tax deductions outweigh benefits.  
+- ⚠️ **Adjust Strategically**: Shift to non-taxable options (food stubs) if tax deductions outweigh benefits.  
 - ⚠️ **Gradual Implementation**: Phase increases (₱250 now, ₱250 later) to balance inflation support.  
 
 ## 3. **Align with Inflation Trends**  
