@@ -5,7 +5,7 @@
 
 /**
  *
- * @author ransel
+ * @author mtd solutions
  */
 public class GovernmentContributionsCalculator {
     public static double calculateSSS(double monthlySalary) {
