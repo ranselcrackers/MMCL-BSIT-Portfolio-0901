@@ -5,7 +5,7 @@
 
 /**
  *
- * @author ransel
+ * @author mtd solutions
  */
 /**
  * This class calculates payroll based on hours worked and overtime.
