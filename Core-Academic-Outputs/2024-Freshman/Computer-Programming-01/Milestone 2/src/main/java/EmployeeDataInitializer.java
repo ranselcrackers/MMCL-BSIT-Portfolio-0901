@@ -1,5 +1,5 @@
 /**
- * This code is made by Ransel Sumatra.
+ * This code is made by Ransel Sumatra, MTD Solutions.
  * GitHub: https://github.com/ranselcrackers/
  * GitHub Username: ranselcrackers
  * Specialization: BSIT Major in Marketing Technologies at Mapúa Malayan Colleges Laguna
