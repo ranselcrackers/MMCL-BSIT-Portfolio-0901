@@ -48,47 +48,51 @@ public class PayrollCalculator {
         System.out.println("+-------------------------------------------------------------+");
 
         // Header (with right outline)
-        System.out.println("|                      EMPLOYEE INFORMATION                   |");
+        System.out.println("|                      PAYROLL STATEMENT                      |");
         System.out.println("+-------------------------------------------------------------+");
 
-        // Employee Details (no right outline)
-        System.out.printf("  %-25s: %-40s\n", "Employee #", employeeNumber);
-        System.out.printf("  %-25s: %-40s\n", "Name", firstName + " " + lastName);
-        System.out.printf("  %-25s: %-40s\n", "Birthday", birthday);
-
-        // Split address into two lines if it's too long
-        String[] addressLines = splitAddress(address, 40); // Split address into 40-character lines
-        System.out.printf("  %-25s: %-40s\n", "Address", addressLines[0]); // First line of address
-        System.out.printf("  %-25s  %-40s\n", "", addressLines[1]);       // Second line of address (no label)
-
-        System.out.printf("  %-25s: %-40s\n", "Phone Number", phoneNumber);
-
-        // Government IDs header (with right outline)
-        System.out.println("+-------------------------------------------------------------+");
-        System.out.println("|                 GOVERNMENT AGENCY DETAILS                   |");
-        System.out.println("+-------------------------------------------------------------+");
-
-        // Government IDs details (no right outline)
-        System.out.println("\nPAYROLL STATEMENT");
+        // Payroll Statement (no right outline)
         System.out.println("Employee: " + employee.getFullName());
         System.out.println("Employee #: " + employee.getEmployeeNumber());
         System.out.println("Position: " + employee.getPosition());
         System.out.println("Hourly Rate: PHP " + employee.getHourlyRate());
+        System.out.println("+-------------------------------------------------------------+");
+        System.out.println("\n");
 
-        // Employment Details header (with right outline)
+        // Government Agency Details (with right outline
         System.out.println("+-------------------------------------------------------------+");
-        System.out.println("|                      EMPLOYMENT DETAILS                     |");
+        System.out.println("|                   Government Agency Details                 |");
         System.out.println("+-------------------------------------------------------------+");
+        
+        //Government Agency Details (no right outline)
+        System.out.println("SSS #: " + employee.getSssNumber());
+        System.out.println("PhilHealth #: " + employee.getPhilhealthNumber());
+        System.out.println("TIN #: " + employee.getTinNumber());
+        System.out.println("Pag-IBIG #: " + employee.getPagibigNumber());
+        System.out.println("+-------------------------------------------------------------+");
+        System.out.println("\n");
+        
+        //Payroll Calculations (no right outline) 
+        System.out.println("+-------------------------------------------------------------+");
+        System.out.println("Period: " + month + " Week " + week);
+        System.out.printf("Basic Pay: PHP %.2f\n", basicPay);
+        System.out.printf("Overtime Pay: PHP %.2f\n", overtimePay);
+        System.out.println("+-------------------------------------------------------------+");
+        System.out.println("\n");
 
-        // Employment Details (no right outline)
-        System.out.printf("  %-25s: %-40s\n", "Status", status);
-        System.out.printf("  %-25s: %-40s\n", "Position", position);
-        System.out.printf("  %-25s: %-40s\n", "Immediate Supervisor", immediateSupervisor);
+        // Government Deductions (no right outline) 
+        System.out.println("+-------------------------------------------------------------+");
+        System.out.printf("SSS Deduction: PHP %.2f\n", sss);
+        System.out.printf("PhilHealth Deduction: PHP %.2f\n", philhealth);
+        System.out.printf("Pag-IBIG Deduction: PHP %.2f\n", pagibig);
+        System.out.printf("Withholding Tax: PHP %.2f\n", withholdingTax);
+        System.out.println("+------------------------------------------------------------+");
+        System.out.println("\n");
 
-        // Salary and Allowances header (with right outline)
-        System.out.println("+-------------------------------------------------------------+");
-        System.out.println("|                      SALARY & ALLOWANCES                    |");
-        System.out.println("+-------------------------------------------------------------+");
+        // Net Pay (no right outline) 
+        System.out.println("+------------------------------------------------------------+");
+        System.out.printf("Net Pay: PHP %.2f\n", netPay);
+        System.out.println("+------------------------------------------------------------+");
 
         // Bottom border (with right outline)
         System.out.println("+-------------------------------------------------------------+");
