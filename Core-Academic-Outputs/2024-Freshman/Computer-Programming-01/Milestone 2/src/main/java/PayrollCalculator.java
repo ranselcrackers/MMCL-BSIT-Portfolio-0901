@@ -41,29 +41,72 @@ public class PayrollCalculator {
         double grossPay = basicPay + overtimePay;
         double totalDeductions = sss + philhealth + pagibig + withholdingTax;
         double netPay = grossPay - totalDeductions;
+        
+// Method to display employee information
+    public void displayEmployeeInfo() {
+        // Top border (with right outline)
+        System.out.println("+-------------------------------------------------------------+");
 
-        // Display payroll statement
+        // Header (with right outline)
+        System.out.println("|                      EMPLOYEE INFORMATION                   |");
+        System.out.println("+-------------------------------------------------------------+");
+
+        // Employee Details (no right outline)
+        System.out.printf("  %-25s: %-40s\n", "Employee #", employeeNumber);
+        System.out.printf("  %-25s: %-40s\n", "Name", firstName + " " + lastName);
+        System.out.printf("  %-25s: %-40s\n", "Birthday", birthday);
+
+        // Split address into two lines if it's too long
+        String[] addressLines = splitAddress(address, 40); // Split address into 40-character lines
+        System.out.printf("  %-25s: %-40s\n", "Address", addressLines[0]); // First line of address
+        System.out.printf("  %-25s  %-40s\n", "", addressLines[1]);       // Second line of address (no label)
+
+        System.out.printf("  %-25s: %-40s\n", "Phone Number", phoneNumber);
+
+        // Government IDs header (with right outline)
+        System.out.println("+-------------------------------------------------------------+");
+        System.out.println("|                 GOVERNMENT AGENCY DETAILS                   |");
+        System.out.println("+-------------------------------------------------------------+");
+
+        // Government IDs details (no right outline)
         System.out.println("\nPAYROLL STATEMENT");
         System.out.println("Employee: " + employee.getFullName());
         System.out.println("Employee #: " + employee.getEmployeeNumber());
         System.out.println("Position: " + employee.getPosition());
         System.out.println("Hourly Rate: PHP " + employee.getHourlyRate());
-        System.out.println("----------------------------------------");
-        System.out.println("Government Agency Details:");
-        System.out.println("SSS #: " + employee.getSssNumber());
-        System.out.println("PhilHealth #: " + employee.getPhilhealthNumber());
-        System.out.println("TIN #: " + employee.getTinNumber());
-        System.out.println("Pag-IBIG #: " + employee.getPagibigNumber());
-        System.out.println("----------------------------------------");
-        System.out.println("Period: " + month + " Week " + week);
-        System.out.printf("Basic Pay: PHP %.2f\n", basicPay);
-        System.out.printf("Overtime Pay: PHP %.2f\n", overtimePay);
-        System.out.println("----------------------------------------");
-        System.out.printf("SSS Deduction: PHP %.2f\n", sss);
-        System.out.printf("PhilHealth Deduction: PHP %.2f\n", philhealth);
-        System.out.printf("Pag-IBIG Deduction: PHP %.2f\n", pagibig);
-        System.out.printf("Withholding Tax: PHP %.2f\n", withholdingTax);
-        System.out.println("----------------------------------------");
-        System.out.printf("Net Pay: PHP %.2f\n", netPay);
+
+        // Employment Details header (with right outline)
+        System.out.println("+-------------------------------------------------------------+");
+        System.out.println("|                      EMPLOYMENT DETAILS                     |");
+        System.out.println("+-------------------------------------------------------------+");
+
+        // Employment Details (no right outline)
+        System.out.printf("  %-25s: %-40s\n", "Status", status);
+        System.out.printf("  %-25s: %-40s\n", "Position", position);
+        System.out.printf("  %-25s: %-40s\n", "Immediate Supervisor", immediateSupervisor);
+
+        // Salary and Allowances header (with right outline)
+        System.out.println("+-------------------------------------------------------------+");
+        System.out.println("|                      SALARY & ALLOWANCES                    |");
+        System.out.println("+-------------------------------------------------------------+");
+
+        // Bottom border (with right outline)
+        System.out.println("+-------------------------------------------------------------+");
+
+        // Simple divider for the next table
+        System.out.println("---------------------------------------------------------------");
     }
+
+    // Helper method to split the address into two lines
+    private String[] splitAddress(String address, int maxLength) {
+        String[] lines = new String[2];
+        if (address.length() <= maxLength) {
+            lines[0] = address;
+            lines[1] = ""; // Empty line if address is short
+        } else {
+            lines[0] = address.substring(0, maxLength); // First part of the address
+            lines[1] = address.substring(maxLength);    // Second part of the address
+        }
+        return lines;
+    }    
 }
