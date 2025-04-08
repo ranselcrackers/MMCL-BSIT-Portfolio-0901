@@ -23,8 +23,6 @@
 
 ---
 
-✅ **No schedule conflicts detected.**
-
 🧠 Ready for a productive term!
 
 
